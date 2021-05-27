@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping> <!-- root tag -->
+    <!-- class tag is used map an entity with a db table, in this case mapping 
+        Employee object to EMP table -->
+    <class name="com.cg.hibernate_demo1.Employee" table="emp">
+        <!-- id column is used to map entity class id field with table's primary 
+            key column -->
+        <id name="id">
+            <generator class="assigned"></generator>
+        </id>
+
+
+        <!-- mapping entity(Employee.java) name field with name column of emp table -->
+        <property name="name"></property>
+
+
+        <!-- mapping entity(Employee.java) email field with email column of emp table -->
+        <property name="email"></property>
+    </class>
+</hibernate-mapping>
